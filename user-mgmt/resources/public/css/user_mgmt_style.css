@@ -1,0 +1,7 @@
+/* user-mgmt CSS */
+.user_list {
+  display:flex;
+  flex-direction: row;
+  width: 95%;
+  font-family:"Frutiger";
+}
