@@ -7,7 +7,7 @@
 
 (enable-console-print!)
 
-(defonce app-state (atom {:users []}))
+(defonce app-state (atom {:users [] :new-user "" }))
 
 (defn add-user [state]
   (println (str "users " (get @state :new-user)))
@@ -34,18 +34,19 @@
               [:div {:class "list-user-main"} (get user :name)]
               [:div {:class "list-user-main"} (get user :point)]
               [:div {:class "list-user-main"}
-              [:div {:class "list-user-main"}
-               [:input
+              [:input
                 {:type "button"
+                 :class "list-user-main"
                  :value "+"
-                 :on-click #(increment-point state index)}]]
-              [:div {:class "list-user-main"}
-               [:input
+                 :on-click #(increment-point state index)}]
+              [:input
                 {:type "button"
+                 :class "list-user-main"
                  :value "-"
-                 :on-click #(decrement-point state index)}]]
+                 :on-click #(decrement-point state index)}]
                [:input
                 {:type "button"
+                 :class "list-user-main"
                  :value "Delete "
 
                  :on-click #(delete-user state index)}]]]))
@@ -58,10 +59,9 @@
   ;(swap! state update :users (fn [users] (vec (sort-by first users))))
   )
 
-
 (defn get-input-interface [state]
   (sab/html
-   [:div
+   [:div {:class "input-tag"}
     [:input
      {:type "text"
       :placeholder "Enter user name"
@@ -91,11 +91,23 @@
   {:inspect-data true}) ; Param 5
 
 
+  (defn render-app
+    "Render the UI on DOM node, according to state: UI=f(S)."
+    [state node]
+      (.render js/ReactDOM
+               (get-interface app-state)
+               node))
+
+  ;; We add a watcher to render the UI on state change.
+  (add-watch
+   app-state
+   :render
+   (fn [_ atom _ _]
+     (render-app atom (.getElementById js/document "main-app-area"))))
+
 (defn main []
-  ;; conditionally start the app based on whether the #main-app-area
-  ;; node is on the page
   (if-let [node (.getElementById js/document "main-app-area")]
-    (.render js/ReactDOM (get-interface app-state) node)))
+    (render-app atom (.getElementById js/document "main-app-area"))))
 (main)
 
 ;; remember to run lein figwheel and then browse to

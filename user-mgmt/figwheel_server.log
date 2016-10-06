@@ -10501,3 +10501,28 @@ Notifyng browser that CSS file changed: resources/public/css/user_mgmt_style.css
 Notifyng browser that CSS file changed: resources/public/css/user_mgmt_style.css
 Notifyng browser that CSS file changed: resources/public/css/user_mgmt_style.css
 Notifyng browser that CSS file changed: resources/public/css/user_mgmt_style.css
+[0mCompiling "resources/public/js/compiled/user_mgmt.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/user_mgmt.js" in 0.273 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/goog/deps.js
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  out/user_mgmt/core.js
+[0mCompiling "resources/public/js/compiled/user_mgmt.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/user_mgmt.js" in 0.247 seconds.[0m
+notifying browser that file changed:  out/user_mgmt/core.js
+[0mCompiling "resources/public/js/compiled/user_mgmt.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/user_mgmt.js" in 0.314 seconds.[0m
+notifying browser that file changed:  out/user_mgmt/core.js
+[0mCompiling "resources/public/js/compiled/user_mgmt.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/user_mgmt.js" in 0.585 seconds.[0m
+notifying browser that file changed:  out/user_mgmt/core.js
+[0mCompiling "resources/public/js/compiled/user_mgmt.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/user_mgmt.js" in 0.227 seconds.[0m
+notifying browser that file changed:  out/user_mgmt/core.js
+[0mCompiling "resources/public/js/compiled/user_mgmt.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/user_mgmt.js" in 0.312 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  out/user_mgmt/core.js
+[0mCompiling "resources/public/js/compiled/user_mgmt.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/public/js/compiled/user_mgmt.js" in 0.31 seconds.[0m
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  out/user_mgmt/core.js

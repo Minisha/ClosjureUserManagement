@@ -27,29 +27,28 @@
  (defn delete-user [state index]
    (swap!  state update :users (fn [users] (vec (keep-indexed (fn [idx arg] (when-not (= idx index) arg)) users)))))
 
+
 (defn list-user [state index user]
   (sab/html [:div
               {:key index
                :class "list-user-main"}
-              [:div {:class "list-user-main"} (get user :name)]
-              [:div {:class "list-user-main"} (get user :point)]
-              [:div {:class "list-user-main"}
+              [:div  (get user :name)]
+              [:div {} (get user :point)]
+
               [:input
                 {:type "button"
-                 :class "list-user-main"
                  :value "+"
                  :on-click #(increment-point state index)}]
               [:input
                 {:type "button"
-                 :class "list-user-main"
                  :value "-"
                  :on-click #(decrement-point state index)}]
                [:input
                 {:type "button"
-                 :class "list-user-main"
+
                  :value "Delete "
 
-                 :on-click #(delete-user state index)}]]]))
+                 :on-click #(delete-user state index)}]]))
 
 
 
