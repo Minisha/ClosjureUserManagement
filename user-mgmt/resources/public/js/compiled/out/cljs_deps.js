@@ -23,8 +23,8 @@ goog.addDependency("../figwheel/client.js", ['figwheel.client'], ['goog.userAgen
 goog.addDependency("../sablono/util.js", ['sablono.util'], ['goog.Uri', 'cljs.core', 'clojure.set', 'clojure.string']);
 goog.addDependency("../sablono/normalize.js", ['sablono.normalize'], ['sablono.util', 'cljs.core', 'clojure.set', 'clojure.string']);
 goog.addDependency("../react.inc.js", ['cljsjs.react'], []);
-goog.addDependency("../sablono/interpreter.js", ['sablono.interpreter'], ['sablono.util', 'cljs.core', 'goog.object', 'cljsjs.react', 'sablono.normalize', 'clojure.string']);
 goog.addDependency("../react-dom.inc.js", ['cljsjs.react.dom'], ['cljsjs.react']);
+goog.addDependency("../sablono/interpreter.js", ['sablono.interpreter'], ['sablono.util', 'cljs.core', 'goog.object', 'cljsjs.react', 'sablono.normalize', 'clojure.string']);
 goog.addDependency("../sablono/core.js", ['sablono.core'], ['goog.dom', 'sablono.util', 'goog.string', 'cljs.core', 'cljsjs.react', 'cljsjs.react.dom', 'sablono.interpreter', 'sablono.normalize', 'clojure.string']);
 goog.addDependency("../user_mgmt/core.js", ['user_mgmt.core'], ['cljs.core', 'sablono.core']);
 goog.addDependency("../541BAD3.js", ['figwheel.connect.dev'], ['cljs.core', 'user_mgmt.core', 'figwheel.client', 'figwheel.client.utils']);

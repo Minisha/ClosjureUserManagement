@@ -9,9 +9,8 @@
 
 (defonce app-state (atom {:users []}))
 
-
-
 (defn add-user [state]
+  (println (str "users " (get @state :new-user)))
  (swap! state update :users conj {:name (get @state :new-user), :point 0}))
 
 (defn sort-user [state]
@@ -31,28 +30,24 @@
 (defn list-user [state index user]
   (sab/html [:div
               {:key index
-              :style {:display "flex"
-                      :flex-direction "row"
-                      :justify-content "center"
-                      :align-items "center"}}
-              [:div {:style {:margin-left "20px"}}(get user :name)]
-              [:div {:style {:margin-left "20px"}}(get user :point)]
-              [:div
-              [:input
-               {:type "button"
-                :value "+"
-                :on-click #(increment-point state index)
-                :style {:margin-left "20px"
-                        }}]
-              [:input
-               {:type "button"
-                :value "-"
-                :on-click #(decrement-point state index)
-                :style {:margin-left "20px"}}]
+               :class "list-user-main"}
+              [:div {:class "list-user-main"} (get user :name)]
+              [:div {:class "list-user-main"} (get user :point)]
+              [:div {:class "list-user-main"}
+              [:div {:class "list-user-main"}
                [:input
                 {:type "button"
-                 :value "Delete"
-                 :style {:margin-left "20px"}
+                 :value "+"
+                 :on-click #(increment-point state index)}]]
+              [:div {:class "list-user-main"}
+               [:input
+                {:type "button"
+                 :value "-"
+                 :on-click #(decrement-point state index)}]]
+               [:input
+                {:type "button"
+                 :value "Delete "
+
                  :on-click #(delete-user state index)}]]]))
 
 
@@ -82,8 +77,8 @@
 
 (defn get-interface [state]
   (sab/html [:div
-              (get-input-interface state)
-              (list-users state)]))
+              (list-users state)
+             (get-input-interface state)]))
 
 
 ;;devcards
@@ -100,8 +95,7 @@
   ;; conditionally start the app based on whether the #main-app-area
   ;; node is on the page
   (if-let [node (.getElementById js/document "main-app-area")]
-    (.render js/ReactDOM (get-input-interface app-state) node)))
-
+    (.render js/ReactDOM (get-interface app-state) node)))
 (main)
 
 ;; remember to run lein figwheel and then browse to

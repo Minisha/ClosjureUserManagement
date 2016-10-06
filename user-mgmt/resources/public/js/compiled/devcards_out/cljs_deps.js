@@ -25,10 +25,10 @@ goog.addDependency("../sablono/normalize.js", ['sablono.normalize'], ['sablono.u
 goog.addDependency("../showdown.inc.js", ['cljsjs.showdown'], []);
 goog.addDependency("../devcards/util/markdown.js", ['devcards.util.markdown'], ['cljs.core', 'cljsjs.showdown', 'clojure.string']);
 goog.addDependency("../cljs/test.js", ['cljs.test'], ['cljs.core', 'cljs.pprint', 'clojure.string']);
-goog.addDependency("../devcards/util/utils.js", ['devcards.util.utils'], ['cljs.core', 'cljs.pprint']);
 goog.addDependency("../react.inc.js", ['cljsjs.react'], []);
-goog.addDependency("../react-dom.inc.js", ['cljsjs.react.dom'], ['cljsjs.react']);
 goog.addDependency("../sablono/interpreter.js", ['sablono.interpreter'], ['sablono.util', 'cljs.core', 'goog.object', 'cljsjs.react', 'sablono.normalize', 'clojure.string']);
+goog.addDependency("../devcards/util/utils.js", ['devcards.util.utils'], ['cljs.core', 'cljs.pprint']);
+goog.addDependency("../react-dom.inc.js", ['cljsjs.react.dom'], ['cljsjs.react']);
 goog.addDependency("../sablono/core.js", ['sablono.core'], ['goog.dom', 'sablono.util', 'goog.string', 'cljs.core', 'cljsjs.react', 'cljsjs.react.dom', 'sablono.interpreter', 'sablono.normalize', 'clojure.string']);
 goog.addDependency("../devcards/util/edn_renderer.js", ['devcards.util.edn_renderer'], ['devcards.util.utils', 'cljs.core', 'sablono.core']);
 goog.addDependency("../devcards/system.js", ['devcards.system'], ['devcards.util.utils', 'cljs.core', 'goog.history.EventType', 'cljsjs.react', 'goog.History', 'cljs.core.async', 'sablono.core', 'cljsjs.react.dom', 'devcards.util.edn_renderer', 'goog.labs.userAgent.device', 'clojure.string', 'goog.events']);

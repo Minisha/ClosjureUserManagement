@@ -1,7 +1,13 @@
 /* user-mgmt CSS */
-.user_list {
+
+.list-user-main {
   display:flex;
   flex-direction: row;
-  width: 95%;
+  width: 50%;
   font-family:"Frutiger";
+  margin-top: 2px;
+}
+
+.input-tag {
+  margin-top: 20px
 }
