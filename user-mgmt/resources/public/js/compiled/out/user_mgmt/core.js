@@ -14,8 +14,8 @@ return cljs.core.swap_BANG_.call(null,state,cljs.core.update,new cljs.core.Keywo
 });
 user_mgmt.core.sort_user = (function user_mgmt$core$sort_user(state){
 return cljs.core.swap_BANG_.call(null,state,cljs.core.update,new cljs.core.Keyword(null,"users","users",-713552705),(function (users){
-return cljs.core.vec.call(null,cljs.core.sort_by.call(null,cljs.core.juxt.call(null,new cljs.core.Keyword(null,"point","point",1813198264)),(function (p1__40128_SHARP_,p2__40129_SHARP_){
-return (p1__40128_SHARP_ > p2__40129_SHARP_);
+return cljs.core.vec.call(null,cljs.core.sort_by.call(null,cljs.core.juxt.call(null,new cljs.core.Keyword(null,"point","point",1813198264)),(function (p1__40297_SHARP_,p2__40298_SHARP_){
+return (p1__40297_SHARP_ > p2__40298_SHARP_);
 }),users));
 }));
 });
@@ -45,29 +45,29 @@ return arg;
 }));
 });
 user_mgmt.core.list_user = (function user_mgmt$core$list_user(state,index,user){
-return React.createElement("div",({"key": index, "className": "list-user-main"}),React.createElement("div",({"className": "list-user-main"}),sablono.interpreter.interpret.call(null,cljs.core.get.call(null,user,new cljs.core.Keyword(null,"name","name",1843675177)))),React.createElement("div",({"className": "list-user-main"}),sablono.interpreter.interpret.call(null,cljs.core.get.call(null,user,new cljs.core.Keyword(null,"point","point",1813198264)))),React.createElement("div",({"className": "list-user-main"}),React.createElement("div",({"className": "list-user-main"}),sablono.interpreter.create_element.call(null,"input",({"type": "button", "value": "+", "onClick": (function (){
+return React.createElement("div",({"key": index, "className": "list-user-main"}),React.createElement("div",({"className": "list-user-main"}),sablono.interpreter.interpret.call(null,cljs.core.get.call(null,user,new cljs.core.Keyword(null,"name","name",1843675177)))),React.createElement("div",({"className": "list-user-main"}),sablono.interpreter.interpret.call(null,cljs.core.get.call(null,user,new cljs.core.Keyword(null,"point","point",1813198264)))),React.createElement("div",({"className": "list-user-main"}),sablono.interpreter.create_element.call(null,"input",({"type": "button", "value": "+", "onClick": (function (){
 return user_mgmt.core.increment_point.call(null,state,index);
-})}))),React.createElement("div",({"className": "list-user-main"}),sablono.interpreter.create_element.call(null,"input",({"type": "button", "value": "-", "onClick": (function (){
+}), "className": "list-user-main"})),sablono.interpreter.create_element.call(null,"input",({"type": "button", "value": "-", "onClick": (function (){
 return user_mgmt.core.decrement_point.call(null,state,index);
-})}))),sablono.interpreter.create_element.call(null,"input",({"type": "button", "value": "Delete ", "onClick": (function (){
+}), "className": "list-user-main"})),sablono.interpreter.create_element.call(null,"input",({"type": "button", "value": "Delete ", "onClick": (function (){
 return user_mgmt.core.delete_user.call(null,state,index);
-})}))));
+}), "className": "list-user-main"}))));
 });
 user_mgmt.core.list_users = (function user_mgmt$core$list_users(state){
-return cljs.core.map_indexed.call(null,(function (p1__40130_SHARP_,p2__40131_SHARP_){
-return user_mgmt.core.list_user.call(null,state,p1__40130_SHARP_,p2__40131_SHARP_);
+return cljs.core.map_indexed.call(null,(function (p1__40299_SHARP_,p2__40300_SHARP_){
+return user_mgmt.core.list_user.call(null,state,p1__40299_SHARP_,p2__40300_SHARP_);
 }),cljs.core.get.call(null,cljs.core.deref.call(null,state),new cljs.core.Keyword(null,"users","users",-713552705)));
 });
 user_mgmt.core.get_input_interface = (function user_mgmt$core$get_input_interface(state){
-return React.createElement("div",({"className": "input-tag"}),sablono.interpreter.create_element.call(null,"input",({"type": "text", "placeholder": "Enter user name", "size": "50", "onChange": (function (p1__40132_SHARP_){
-return cljs.core.swap_BANG_.call(null,state,cljs.core.assoc,new cljs.core.Keyword(null,"new-user","new-user",1575436062),p1__40132_SHARP_.target.value);
+return React.createElement("div",({"className": "input-tag"}),sablono.interpreter.create_element.call(null,"input",({"type": "text", "placeholder": "Enter user name", "size": "50", "onChange": (function (p1__40301_SHARP_){
+return cljs.core.swap_BANG_.call(null,state,cljs.core.assoc,new cljs.core.Keyword(null,"new-user","new-user",1575436062),p1__40301_SHARP_.target.value);
 })})),sablono.interpreter.create_element.call(null,"input",({"type": "button", "value": "Add user", "onClick": (function (){
 return user_mgmt.core.add_user.call(null,state);
 }), "style": ({"marginLeft": "5px"})})));
 });
 user_mgmt.core.get_interface = (function user_mgmt$core$get_interface(state){
-var attrs40134 = user_mgmt.core.list_users.call(null,state);
-return cljs.core.apply.call(null,React.createElement,"div",((cljs.core.map_QMARK_.call(null,attrs40134))?sablono.interpreter.attributes.call(null,attrs40134):null),((cljs.core.map_QMARK_.call(null,attrs40134))?new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [sablono.interpreter.interpret.call(null,user_mgmt.core.get_input_interface.call(null,state))], null):new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [sablono.interpreter.interpret.call(null,attrs40134),sablono.interpreter.interpret.call(null,user_mgmt.core.get_input_interface.call(null,state))], null)));
+var attrs40303 = user_mgmt.core.list_users.call(null,state);
+return cljs.core.apply.call(null,React.createElement,"div",((cljs.core.map_QMARK_.call(null,attrs40303))?sablono.interpreter.attributes.call(null,attrs40303):null),((cljs.core.map_QMARK_.call(null,attrs40303))?new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [sablono.interpreter.interpret.call(null,user_mgmt.core.get_input_interface.call(null,state))], null):new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [sablono.interpreter.interpret.call(null,attrs40303),sablono.interpreter.interpret.call(null,user_mgmt.core.get_input_interface.call(null,state))], null)));
 });
 /**
  * Render the UI on DOM node, according to state: UI=f(S).
@@ -89,4 +89,4 @@ return null;
 });
 user_mgmt.core.main.call(null);
 
-//# sourceMappingURL=core.js.map?rel=1475738974449
+//# sourceMappingURL=core.js.map?rel=1475739753647

@@ -34,18 +34,19 @@
               [:div {:class "list-user-main"} (get user :name)]
               [:div {:class "list-user-main"} (get user :point)]
               [:div {:class "list-user-main"}
-              [:div {:class "list-user-main"}
-               [:input
+              [:input
                 {:type "button"
+                 :class "list-user-main"
                  :value "+"
-                 :on-click #(increment-point state index)}]]
-              [:div {:class "list-user-main"}
-               [:input
+                 :on-click #(increment-point state index)}]
+              [:input
                 {:type "button"
+                 :class "list-user-main"
                  :value "-"
-                 :on-click #(decrement-point state index)}]]
+                 :on-click #(decrement-point state index)}]
                [:input
                 {:type "button"
+                 :class "list-user-main"
                  :value "Delete "
 
                  :on-click #(delete-user state index)}]]]))
